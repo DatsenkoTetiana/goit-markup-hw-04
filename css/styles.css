@@ -37,6 +37,7 @@ ul {
     --border-color: #ececec;
     --border-cart-color: #eeeeee;
     --btn-background-color: #188ce8;
+    --border-color: #AFB1B8;
 }
 
 ul {
@@ -87,6 +88,9 @@ span {
 
 .header-nav .nav {
     display: flex;
+}
+
+.header-nav {
     margin-left: 93px;
 }
 
@@ -148,6 +152,31 @@ span {
     color: var(--blue-background-color);
 }
 
+.icon-envelope {
+    width: 16px;
+    height: 12px;
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.icon-smartphone {
+    width: 10px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+
+.icon-envelope:hover,
+.icon-smartphone:hover {
+    fill: var(--blue-background-color);
+}
+
+.icon-envelope:focus,
+.icon-smartphone:focus {
+    fill: var(--blue-background-color);
+}
+
 /* section */
 
 .section-hero {
@@ -155,6 +184,14 @@ span {
     padding-bottom: 200px;
     text-align: center;
     background-color: var(--darkblue-background-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../images/hero/Img-10-2.jpg");
+    max-width: 1600px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .hero-title {
@@ -224,15 +261,13 @@ span {
     color: var(--white-color);
 }
 
-.btns:hover {
+.btns:hover,
+.btns:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--blue-background-color);
     color: var(--white-color);
 }
 
-.btns:focus {
-    background-color: var(--blue-background-color);
-    color: var(--white-color);
-}
 
 /* section-list */
 .feature {
@@ -266,7 +301,22 @@ span {
     color: var(--grey-color);
 }
 
-/* section cart */
+.icon-list {
+    display: flex;
+    background-color: var(--lightdrey-background-color);
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-antenna {
+    margin: 0;
+    width: 70px;
+    height: 70px;
+}
+
+/* section team */
 .team {
     background-color: var(--lightdrey-background-color);
 }
@@ -317,6 +367,69 @@ span {
     line-height: 1.1;
     letter-spacing: 0.03em;
     color: var(--grey-color);
+    margin-bottom: 16px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+
+}
+
+.social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+    fill: #AFB1B8;
+
+}
+
+.social-link:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--blue-background-color);
+
+    fill: var(--white-color);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+
+}
+
+.carts-logo {
+    border: 2px var(--border-color) solid;
+    border-radius: 4px;
+    padding: 16px 32px;
+
+
+}
+
+.carts-logo:not(:last-child) {
+    margin-right: 30px;
+}
+
+.carts-logo:hover,
+.carts-logo:focus {
+    border-color: var(--blue-background-color);
+}
+
+.icon-logo:hover,
+.icon-logo:focus {
+    fill: var(--blue-background-color);
+}
+
+.icon-logo {
+    width: 106px;
+    height: 60px;
+    fill: var(--border-color);
+
+
 }
 
 /* footer */
@@ -365,7 +478,34 @@ span {
     margin-top: 9px;
 }
 
+
+.list-title.footer {
+    padding: 0;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+footer .social-link {
+
+    fill: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 /* portfolio */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
 .portfolio-container {
     display: flex;
@@ -375,6 +515,10 @@ span {
 .container-bg {
     flex-basis: calc((100% - 60px) / 3);
     margin-bottom: 30px;
+}
+
+.container-bg:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .container-bg:not(:nth-child(3n)) {
